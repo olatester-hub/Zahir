@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahir · Accesorios</title>
+<meta name="description" content="Zahir — accesorios femeninos seleccionados pieza por pieza. La disponibilidad se publica en las historias destacadas «Disponible» de nuestro Instagram @zahir_._">
+<link rel="icon" href="assets/logo-zahir.png">
+<style>
+/* ============================================================
+   Zahir — paleta tomada del logotipo de la marca
+   ============================================================ */
+:root{
+  --crema:        #FBF7F1;
+  --crema-2:      #F4EBE0;
+  --arena:        #E7DACA;
+  --dorado:       #B98B3E;
+  --dorado-claro: #D9BC85;
+  --dorado-hondo: #8C6526;
+  --azul:         #6E8CA8;   /* el azul acero del trazo "ahi" */
+  --tinta:        #3B342B;
+  --tinta-suave:  #6E6357;
+  --blanco:       #FFFFFF;
+  --linea:        rgba(59,52,43,.14);
+  --sombra:       0 18px 50px -28px rgba(59,52,43,.45);
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --ancho: 1160px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--crema);
+  color:var(--tinta);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.envoltura{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 28px}
+
+/* --- tipografía --- */
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2.6rem,6vw,4.3rem);line-height:1.06}
+h2{font-size:clamp(2rem,4vw,2.9rem);line-height:1.15}
+h3{font-size:1.32rem;line-height:1.3}
+p{margin:0}
+em{font-style:italic;color:var(--dorado-hondo)}
+
+.rotulo{
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--dorado-hondo);font-weight:600;margin-bottom:18px;
+  display:flex;align-items:center;gap:12px;
+}
+.rotulo::after{content:"";flex:0 0 44px;height:1px;background:var(--dorado-claro)}
+.rotulo.centro{justify-content:center}
+.rotulo.centro::before{content:"";flex:0 0 44px;height:1px;background:var(--dorado-claro)}
+
+.parrafo{color:var(--tinta-suave);max-width:56ch}
+
+/* --- botones --- */
+.boton{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 24px;border-radius:999px;
+  font-size:.83rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  text-decoration:none;border:1px solid transparent;
+  transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+.boton svg{width:17px;height:17px;flex:none}
+.boton--solido{background:var(--tinta);color:var(--crema);box-shadow:var(--sombra)}
+.boton--solido:hover{background:var(--dorado-hondo);transform:translateY(-2px)}
+.boton--linea{border-color:var(--linea);color:var(--tinta)}
+.boton--linea:hover{border-color:var(--dorado);color:var(--dorado-hondo);transform:translateY(-2px)}
+.boton--claro{background:var(--crema);color:var(--tinta)}
+.boton--claro:hover{background:var(--dorado-claro);transform:translateY(-2px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-offset:4px;border-radius:4px}
+
+/* ===================== ENCABEZADO ===================== */
+.encabezado{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,247,241,.86);
+  backdrop-filter:saturate(160%) blur(12px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, padding .3s ease;
+}
+.encabezado.fijo{border-bottom-color:var(--linea)}
+.encabezado .envoltura{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:16px;padding-bottom:16px}
+.marca img{height:46px;width:auto;transition:height .3s ease}
+.encabezado.fijo .marca img{height:38px}
+.menu{display:flex;align-items:center;gap:34px}
+.menu a{
+  text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta-suave);position:relative;padding-bottom:3px;
+}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--dorado);transition:width .3s ease}
+.menu a:hover{color:var(--tinta)}
+.menu a:hover::after{width:100%}
+.encabezado .boton{padding:11px 22px;font-size:.72rem}
+
+/* ===================== PORTADA ===================== */
+.portada{position:relative;overflow:hidden;padding:clamp(44px,6vw,76px) 0 clamp(64px,9vw,112px)}
+.portada::before{
+  content:"";position:absolute;inset:auto -12% -40% 42%;height:120%;
+  background:radial-gradient(60% 60% at 50% 50%, var(--crema-2) 0%, rgba(244,235,224,0) 70%);
+  pointer-events:none;
+}
+.portada .envoltura{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(36px,6vw,84px);align-items:center}
+.portada__texto p.parrafo{margin-top:26px;font-size:1.06rem}
+.portada__acciones{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.portada__nota{
+  display:flex;align-items:center;gap:12px;margin-top:34px;
+  font-size:.9rem;color:var(--tinta-suave);
+}
+.portada__nota strong{color:var(--tinta);font-weight:600}
+.punto{width:9px;height:9px;border-radius:50%;background:var(--dorado);flex:none;position:relative}
+.punto::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--dorado-claro);animation:latido 2.6s ease-out infinite}
+@keyframes latido{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+
+.portada__figura{position:relative}
+.portada__figura img{
+  width:100%;aspect-ratio:4/5;max-height:min(72vh,600px);
+  object-fit:cover;object-position:center 58%;border-radius:2px;
+  box-shadow:var(--sombra);
+}
+.portada__figura::after{
+  content:"";position:absolute;inset:24px -22px -24px 22px;
+  border:1px solid var(--dorado-claro);border-radius:2px;z-index:-1;
+}
+.sello{
+  position:absolute;left:-28px;bottom:34px;
+  background:var(--blanco);border:1px solid var(--linea);
+  padding:16px 22px;border-radius:2px;box-shadow:var(--sombra);
+  font-family:var(--serif);font-size:1.02rem;line-height:1.35;
+}
+.sello span{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado-hondo);margin-bottom:4px}
+
+/* ===================== CINTA DE VALORES ===================== */
+.cinta{background:var(--crema-2);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.cinta .envoltura{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;padding-top:44px;padding-bottom:44px}
+.valor{display:flex;flex-direction:column;gap:10px}
+.valor svg{width:26px;height:26px;stroke:var(--dorado-hondo);fill:none;stroke-width:1.2}
+.valor h3{font-size:1.02rem;font-family:var(--sans);font-weight:600;letter-spacing:.01em}
+.valor p{font-size:.9rem;color:var(--tinta-suave);line-height:1.6}
+
+/* ===================== COLECCIÓN ===================== */
+.seccion{padding:clamp(70px,10vw,120px) 0}
+.seccion__cabeza{max-width:640px;margin-bottom:clamp(38px,5vw,58px)}
+.seccion__cabeza.centro{margin-left:auto;margin-right:auto;text-align:center}
+.seccion__cabeza.centro .parrafo{margin:20px auto 0}
+.seccion__cabeza p{margin-top:20px}
+
+.galeria{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.pieza{position:relative;overflow:hidden;border-radius:2px;background:var(--arena)}
+.pieza img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.pieza:hover img{transform:scale(1.05)}
+.pieza figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:26px 24px 22px;color:var(--blanco);
+  background:linear-gradient(to top, rgba(43,37,29,.78), rgba(43,37,29,0));
+}
+.pieza figcaption span{display:block;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado-claro);margin-bottom:5px}
+.pieza figcaption strong{font-family:var(--serif);font-size:1.3rem;font-weight:400}
+.pieza{height:clamp(300px,31vw,430px)}
+.pieza--a{grid-column:span 7}
+.pieza--b{grid-column:span 5}
+.pieza--c{grid-column:span 5}
+.pieza--d{grid-column:span 7}
+
+/* ===================== DISPONIBILIDAD ===================== */
+.disponible{background:var(--tinta);color:var(--crema);position:relative;overflow:hidden}
+.disponible::before{
+  content:"";position:absolute;inset:-30% 55% 40% -10%;
+  background:radial-gradient(50% 50% at 50% 50%, rgba(185,139,62,.28), transparent 70%);
+}
+.disponible .envoltura{position:relative;display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,80px);align-items:center;padding-top:clamp(70px,9vw,110px);padding-bottom:clamp(70px,9vw,110px)}
+.disponible .rotulo{color:var(--dorado-claro)}
+.disponible .rotulo::after{background:rgba(217,188,133,.45)}
+.disponible h2{color:var(--crema)}
+.disponible .parrafo{color:rgba(251,247,241,.76);margin-top:22px}
+.pasos{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:18px}
+.pasos li{display:flex;gap:16px;align-items:flex-start}
+.pasos b{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  border:1px solid rgba(217,188,133,.5);color:var(--dorado-claro);
+  display:grid;place-items:center;font-size:.8rem;font-weight:600;font-family:var(--sans);
+}
+.pasos p{color:rgba(251,247,241,.82);font-size:.97rem}
+.pasos strong{color:var(--crema);font-weight:600}
+.disponible .boton{margin-top:40px}
+
+/* teléfono con historias destacadas */
+.telefono{
+  background:var(--crema);border-radius:26px;padding:26px 22px 30px;
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.6);max-width:400px;margin:0 auto;width:100%;
+}
+.telefono__barra{display:flex;align-items:center;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--linea)}
+.telefono__avatar{width:52px;height:52px;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--dorado),var(--azul));flex:none}
+.telefono__avatar img{width:100%;height:100%;border-radius:50%;object-fit:contain;padding:7px;border:2px solid var(--crema);background:var(--crema)}
+.telefono__barra div{line-height:1.3}
+.telefono__barra strong{display:block;font-size:.95rem;color:var(--tinta)}
+.telefono__barra span{font-size:.78rem;color:var(--tinta-suave)}
+.destacadas{display:flex;gap:20px;padding-top:22px}
+.destacada{text-align:center;flex:1}
+.destacada__aro{
+  width:100%;aspect-ratio:1;border-radius:50%;padding:3px;
+  background:var(--arena);display:grid;place-items:center;
+}
+.destacada__aro img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.destacada span{display:block;margin-top:9px;font-size:.72rem;color:var(--tinta-suave);letter-spacing:.04em}
+.destacada--activa .destacada__aro{background:linear-gradient(135deg,var(--dorado),var(--dorado-claro));box-shadow:0 0 0 1px var(--dorado-claro), 0 12px 26px -14px rgba(185,139,62,.9)}
+.destacada--activa .destacada__aro img{border:2px solid var(--crema)}
+.destacada--activa span{color:var(--tinta);font-weight:700}
+.destacada--activa span::after{content:"";display:block;width:22px;height:2px;background:var(--dorado);margin:6px auto 0;border-radius:2px}
+.destacada__aro--vacio{border:1px dashed rgba(59,52,43,.22);background:transparent}
+.destacada__aro--vacio svg{width:20px;height:20px;stroke:var(--tinta-suave);fill:none;stroke-width:1.2}
+
+/* ===================== INSTAGRAM ===================== */
+.instagram{background:var(--crema-2);border-top:1px solid var(--linea)}
+.instagram .envoltura{padding-top:clamp(64px,8vw,96px);padding-bottom:clamp(64px,8vw,96px);text-align:center}
+.arroba{
+  display:inline-flex;align-items:center;gap:14px;text-decoration:none;
+  font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);color:var(--tinta);
+  margin:6px 0 8px;transition:color .3s ease;
+}
+.arroba svg{width:clamp(30px,4vw,42px);height:clamp(30px,4vw,42px);stroke:var(--dorado-hondo);fill:none;stroke-width:1.3}
+.arroba:hover{color:var(--dorado-hondo)}
+.mosaico{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px 0 38px}
+.mosaico a{display:block;overflow:hidden;border-radius:2px;aspect-ratio:1;background:var(--arena)}
+.mosaico img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1), opacity .3s ease}
+.mosaico a:hover img{transform:scale(1.07);opacity:.9}
+
+/* ===================== HISTORIA ===================== */
+.historia .envoltura{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:center}
+.historia__figura{position:relative}
+.historia__figura img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px;box-shadow:var(--sombra)}
+.historia__figura::before{
+  content:"";position:absolute;inset:-22px 22px 22px -22px;
+  border:1px solid var(--dorado-claro);border-radius:2px;z-index:-1;
+}
+.cita{
+  font-family:var(--serif);font-size:1.5rem;line-height:1.5;color:var(--tinta);
+  border-left:2px solid var(--dorado-claro);padding-left:24px;margin-top:30px;
+}
+.cita small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dorado-hondo);margin-top:14px}
+
+/* ===================== CIERRE ===================== */
+.cierre{background:var(--crema-2);border-top:1px solid var(--linea)}
+.cierre .envoltura{text-align:center;padding-top:clamp(64px,8vw,100px);padding-bottom:clamp(64px,8vw,100px)}
+.cierre .boton{margin-top:34px}
+
+/* ===================== PIE ===================== */
+.pie{background:var(--tinta);color:rgba(251,247,241,.7);padding:56px 0 36px;font-size:.88rem}
+.pie__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start}
+.pie img{height:54px;width:auto}
+.pie h4{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado-claro);margin:0 0 16px;font-weight:600}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pie a{text-decoration:none;transition:color .25s ease}
+.pie a:hover{color:var(--dorado-claro)}
+.pie__base{
+  margin-top:44px;padding-top:22px;border-top:1px solid rgba(251,247,241,.14);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:rgba(251,247,241,.5);
+}
+.pie p.lema{margin-top:16px;max-width:38ch;color:rgba(251,247,241,.6)}
+
+/* ===================== ANIMACIÓN AL ENTRAR ===================== */
+.revelar{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.revelar.visible{opacity:1;transform:none}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:960px){
+  .portada .envoltura,.disponible .envoltura,.historia .envoltura{grid-template-columns:1fr}
+  .portada__figura{max-width:460px;margin:8px auto 0}
+  .portada__figura img{max-height:64vh}
+  .portada__figura::after{inset:18px -14px -18px 14px}
+  .sello{left:auto;right:8px;bottom:-16px}
+  .historia__figura{max-width:460px}
+  .cinta .envoltura{grid-template-columns:repeat(2,1fr);gap:28px}
+  .menu{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .envoltura{padding:0 20px}
+  .galeria{gap:14px}
+  .pieza{height:auto}
+  .pieza--a,.pieza--b,.pieza--c,.pieza--d{grid-column:span 12;aspect-ratio:4/3}
+  .mosaico{grid-template-columns:repeat(2,1fr)}
+  .encabezado .boton span{display:none}
+  .encabezado .boton{padding:11px 14px}
+  .sello{padding:12px 16px;font-size:.92rem}
+  .destacadas{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .revelar{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== ENCABEZADO ===================== -->
+<header class="encabezado" id="encabezado">
+  <div class="envoltura">
+    <a class="marca" href="#inicio" aria-label="Zahir · inicio">
+      <img src="assets/logo-zahir.png" alt="Zahir">
+    </a>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#disponible">Disponibilidad</a>
+      <a href="#historia">La marca</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="boton boton--solido" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      <span>@zahir_._</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== PORTADA ===================== -->
+  <section class="portada">
+    <div class="envoltura">
+      <div class="portada__texto revelar">
+        <p class="rotulo">Accesorios femeninos</p>
+        <h1>Detalles que se <em>ven</em>,<br>historias que se llevan.</h1>
+        <p class="parrafo">Collares, anillos, pulseras y dijes elegidos uno a uno: piezas cálidas, sobrias y fáciles de usar todos los días. Pocas unidades de cada diseño, para que lo tuyo siga siendo tuyo.</p>
+        <div class="portada__acciones">
+          <a class="boton boton--solido" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Ver lo disponible
+          </a>
+          <a class="boton boton--linea" href="#coleccion">Ver la colección</a>
+        </div>
+        <p class="portada__nota">
+          <span class="punto" aria-hidden="true"></span>
+          <span>Inventario al día en las historias destacadas <strong>«Disponible»</strong></span>
+        </p>
+      </div>
+
+      <figure class="portada__figura revelar">
+        <img src="assets/Imagen1.jpeg" alt="Collar de eslabones dorados sobre fondo claro" width="1018" height="1280">
+        <figcaption class="sello">
+          <span>Pieza del mes</span>
+          Collar eslabón<br>en tono oro
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== VALORES ===================== -->
+  <section class="cinta">
+    <div class="envoltura">
+      <div class="valor revelar">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1.1 5.6L12 15.7 6.9 18.4 8 12.8 3.9 8.9l5.7-.7z"/></svg>
+        <h3>Selección pieza por pieza</h3>
+        <p>Revisamos cada accesorio antes de publicarlo: brillo parejo, buen cierre y acabados limpios.</p>
+      </div>
+      <div class="valor revelar">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8.6 8.4c2 0 2.7 1.6 3.4 3.6s1.4 3.6 3.4 3.6a3.6 3.6 0 100-7.2c-2 0-2.7 1.6-3.4 3.6s-1.4 3.6-3.4 3.6a3.6 3.6 0 110-7.2z"/></svg>
+        <h3>Diseños atemporales</h3>
+        <p>Tonos dorados y líneas simples que combinan igual de bien con un jean o con un vestido.</p>
+      </div>
+      <div class="valor revelar">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5l8-4.5 8 4.5v7l-8 4.5-8-4.5z"/><path d="M4 8.5l8 4.5 8-4.5M12 13v7.5"/></svg>
+        <h3>Pocas unidades</h3>
+        <p>Series cortas: cuando una pieza sale de las historias «Disponible», es porque ya encontró dueña.</p>
+      </div>
+      <div class="valor revelar">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12.5a7.5 7.5 0 01-10.9 6.7L4 20.5l1.4-4.9A7.5 7.5 0 1120 12.5z"/></svg>
+        <h3>Atención personal</h3>
+        <p>Escribes por Instagram y te respondemos nosotras: te ayudamos a elegir y a apartar tu pieza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COLECCIÓN ===================== -->
+  <section class="seccion" id="coleccion">
+    <div class="envoltura">
+      <div class="seccion__cabeza revelar">
+        <p class="rotulo">La colección</p>
+        <h2>Piezas que hablan bajito y se notan siempre.</h2>
+        <p class="parrafo">Una muestra de lo que encuentras en Zahir. El catálogo completo, con precios y unidades disponibles, vive en nuestro Instagram.</p>
+      </div>
+
+      <div class="galeria">
+        <figure class="pieza pieza--a revelar">
+          <img src="assets/Imagen3.jpeg" alt="Tres pulseras doradas: ojo turco, aro texturizado y cordón trenzado" loading="lazy">
+          <figcaption><span>Pulseras</span><strong>Trío en capas</strong></figcaption>
+        </figure>
+        <figure class="pieza pieza--b revelar">
+          <img src="assets/Imagen2.jpeg" alt="Anillo ancho dorado con acabado satinado" loading="lazy">
+          <figcaption><span>Anillos</span><strong>Banda ancha satinada</strong></figcaption>
+        </figure>
+        <figure class="pieza pieza--c revelar">
+          <img src="assets/Imagen4.jpeg" alt="Dijes dorados con forma de gatito y perrito en cadenas finas" loading="lazy">
+          <figcaption><span>Dijes</span><strong>Mini amuletos</strong></figcaption>
+        </figure>
+        <figure class="pieza pieza--d revelar">
+          <img src="assets/Imagen1.jpeg" alt="Collar de eslabones gruesos dorados con cierre marinero" loading="lazy">
+          <figcaption><span>Collares</span><strong>Eslabón cierre marinero</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DISPONIBILIDAD ===================== -->
+  <section class="disponible" id="disponible">
+    <div class="envoltura">
+      <div class="revelar">
+        <p class="rotulo">Cómo comprar</p>
+        <h2>Lo que hay hoy está en las historias <em>«Disponible»</em>.</h2>
+        <p class="parrafo">Para que nunca preguntes por algo que ya se vendió, mantenemos el inventario actualizado en las <strong>historias destacadas llamadas «Disponible»</strong> de nuestro perfil de Instagram. Si la pieza aparece ahí, es porque puedes llevártela.</p>
+        <ol class="pasos">
+          <li><b>1</b><p>Entra a <strong>@zahir_._</strong> en Instagram.</p></li>
+          <li><b>2</b><p>Abre la historia destacada <strong>«Disponible»</strong>, justo debajo de la biografía.</p></li>
+          <li><b>3</b><p>Envíanos por mensaje directo la pieza que te gustó y la apartamos para ti.</p></li>
+        </ol>
+        <a class="boton boton--claro" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          Abrir «Disponible»
+        </a>
+      </div>
+
+      <div class="telefono revelar" aria-hidden="true">
+        <div class="telefono__barra">
+          <div class="telefono__avatar"><img src="assets/logo-zahir.png" alt=""></div>
+          <div>
+            <strong>zahir_._</strong>
+            <span>Accesorios femeninos</span>
+          </div>
+        </div>
+        <div class="destacadas">
+          <div class="destacada destacada--activa">
+            <div class="destacada__aro"><img src="assets/Imagen1.jpeg" alt=""></div>
+            <span>Disponible</span>
+          </div>
+          <div class="destacada">
+            <div class="destacada__aro"><img src="assets/Imagen3.jpeg" alt=""></div>
+            <span>Novedades</span>
+          </div>
+          <div class="destacada">
+            <div class="destacada__aro"><img src="assets/Imagen4.jpeg" alt=""></div>
+            <span>Envíos</span>
+          </div>
+          <div class="destacada">
+            <div class="destacada__aro destacada__aro--vacio">
+              <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg>
+            </div>
+            <span>Nuevo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTAGRAM ===================== -->
+  <section class="instagram" id="contacto">
+    <div class="envoltura">
+      <p class="rotulo centro revelar">Síguenos</p>
+      <div class="revelar">
+        <a class="arroba" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          @zahir_._
+        </a>
+        <p class="parrafo" style="margin:0 auto">Novedades, combinaciones y el inventario del día. Todo lo que ves publicado se pide por mensaje directo.</p>
+      </div>
+
+      <div class="mosaico revelar">
+        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen1.jpeg" alt="Collar de eslabones dorados" loading="lazy"></a>
+        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen3.jpeg" alt="Pulseras doradas en capas" loading="lazy"></a>
+        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen2.jpeg" alt="Anillo dorado de banda ancha" loading="lazy"></a>
+        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen4.jpeg" alt="Dijes dorados de gatito y perrito" loading="lazy"></a>
+      </div>
+
+      <a class="boton boton--solido revelar" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">Seguir a @zahir_._</a>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORIA ===================== -->
+  <section class="seccion historia" id="historia">
+    <div class="envoltura">
+      <figure class="historia__figura revelar">
+        <img src="assets/Imagen2.jpeg" alt="Mano luciendo un anillo dorado ancho" loading="lazy">
+      </figure>
+      <div class="revelar">
+        <p class="rotulo">La marca</p>
+        <h2>Zahir: lo que se hace <em>visible</em>.</h2>
+        <p class="parrafo">En árabe, <strong>zahir (ظاهر)</strong> significa lo evidente, aquello que se manifiesta. De ahí nace la marca: accesorios pensados para resaltar lo que ya eres, sin gritar. Piezas cálidas, de líneas limpias, que acompañan tu día y hacen especial lo cotidiano.</p>
+        <blockquote class="cita">
+          «Elegimos poco, pero elegimos bien: cada pieza pasa por nuestras manos antes de llegar a las tuyas.»
+          <small>El equipo de Zahir</small>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CIERRE ===================== -->
+  <section class="cierre">
+    <div class="envoltura">
+      <p class="rotulo centro revelar">¿Lista para elegir la tuya?</p>
+      <h2 class="revelar">Mira lo que hay hoy y aparta tu pieza.</h2>
+      <p class="parrafo revelar" style="margin:20px auto 0">La disponibilidad se actualiza en las historias destacadas <strong>«Disponible»</strong>. Escríbenos por mensaje directo y te acompañamos en la elección.</p>
+      <a class="boton boton--solido revelar" href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        Ver disponibilidad en Instagram
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== PIE ===================== -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__grid">
+      <div>
+        <img src="assets/logo-zahir-oro.png" alt="Zahir">
+        <p class="lema">Accesorios femeninos seleccionados pieza por pieza. Disponibilidad siempre al día en las historias destacadas «Disponible».</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#coleccion">Colección</a></li>
+          <li><a href="#disponible">Disponibilidad</a></li>
+          <li><a href="#historia">La marca</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">Instagram @zahir_._</a></li>
+          <li><a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">Mensaje directo</a></li>
+          <li><a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener">Historias «Disponible»</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__base">
+      <span>© <span id="anio">2026</span> Zahir · Todos los derechos reservados.</span>
+      <span>Hecho con cariño para quienes aman los detalles.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Año dinámico
+  document.getElementById('anio').textContent = new Date().getFullYear();
+
+  // Sombra/borde del encabezado al hacer scroll
+  const cabecera = document.getElementById('encabezado');
+  const alScroll = () => cabecera.classList.toggle('fijo', window.scrollY > 12);
+  alScroll();
+  addEventListener('scroll', alScroll, {passive:true});
+
+  // Aparición suave de los bloques
+  const elementos = document.querySelectorAll('.revelar');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada, i) => {
+        if (entrada.isIntersecting) {
+          entrada.target.style.transitionDelay = (i * 90) + 'ms';
+          entrada.target.classList.add('visible');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, {threshold: .12, rootMargin: '0px 0px -8% 0px'});
+    elementos.forEach(el => observador.observe(el));
+  } else {
+    elementos.forEach(el => el.classList.add('visible'));
+  }
+</script>
+</body>
+</html>
