@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "zahir",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4321", "--directory", "/Users/solate/CLAUDE/ZAHIR"],
+      "port": 4321
+    }
+  ]
+}

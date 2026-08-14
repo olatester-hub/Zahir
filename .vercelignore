@@ -1,0 +1,12 @@
+# Archivos que viven en el repositorio pero no se publican en el sitio.
+# La barra inicial ancla el patrón a la raíz: sin ella también excluiría
+# las copias dentro de assets/, que sí deben publicarse.
+/Imagen1.jpeg
+/Imagen2.jpeg
+/Imagen3.jpeg
+/Imagen4.jpeg
+/LogoMarca.jpeg
+/dist/
+/tools/
+/.claude/
+/README.md
