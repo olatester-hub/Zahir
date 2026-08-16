@@ -10,15 +10,17 @@ index.html                  la landing completa (HTML + CSS + JS en un archivo)
 assets/                     imágenes que se publican en el sitio
   logo-zahir.png            logotipo recortado, fondo transparente
   logo-zahir-oro.png        logotipo monocromo dorado (para el pie oscuro)
-  Imagen1..6.jpeg           fotos de producto (5 y 6 son de aros)
-  video-aros.mp4            video de aros de la sección «Aros»
+  Imagen1..5.jpeg           fotos de producto (5 es de aros)
+  video-aros.mp4            video de aros, comprimido con ffmpeg (~580 KB)
   video-aros-poster.jpg     primer fotograma, se muestra mientras carga el video
+  video-regalo.mp4          video de empaque/regalo, comprimido con ffmpeg (~430 KB)
+  video-regalo-poster.jpg   primer fotograma de ese video
 vercel.json                 configuración de Vercel (caché y URLs limpias)
 .vercelignore               archivos que quedan en el repo pero no se publican
 dist/zahir-landing.html     copia autocontenida (medios incrustados), para compartir por archivo
 tools/build_artifact.py     regenera dist/ a partir de index.html
-Imagen1..6.jpeg             fotos originales (respaldo, no se publican)
-Video1.mp4                  video original (respaldo, no se publica)
+Imagen1..5.jpeg             fotos originales (respaldo, no se publican)
+Video1.mp4, Video2.mp4      videos originales sin comprimir (respaldo, no se publican)
 LogoMarca.jpeg              logotipo original (respaldo, no se publica)
 ```
 

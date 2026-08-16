@@ -215,18 +215,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
 }
 .aros__texto .boton{margin-top:32px}
 
-.franja{
-  position:relative;margin:clamp(28px,4vw,46px) 0 0;
-  border-radius:2px;overflow:hidden;background:var(--arena);
+.franja{margin:clamp(40px,5.5vw,64px) 0 0;text-align:center}
+.franja__lienzo{
+  position:relative;width:min(300px,72vw);aspect-ratio:640/1138;
+  margin:0 auto;border-radius:2px;overflow:hidden;
+  background:var(--arena);box-shadow:var(--sombra);
 }
-.franja img{width:100%;height:auto;aspect-ratio:1170/608;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.franja:hover img{transform:scale(1.04)}
-.franja figcaption{
-  position:absolute;left:0;right:0;bottom:0;padding:34px 30px 26px;color:var(--blanco);
-  background:linear-gradient(to top, rgba(43,37,29,.94) 0%, rgba(43,37,29,.74) 40%, rgba(43,37,29,0) 100%);
-}
-.franja figcaption span{display:block;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado-claro);margin-bottom:6px}
-.franja figcaption strong{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:400}
+.franja__lienzo video{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.franja__lienzo:hover video{transform:scale(1.04)}
+.franja figcaption{margin-top:22px}
+.franja figcaption span{display:block;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado-hondo);margin-bottom:6px}
+.franja figcaption strong{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.4rem);font-weight:400;color:var(--tinta)}
 
 /* ===================== DISPONIBILIDAD ===================== */
 .disponible{background:var(--tinta);color:var(--crema);position:relative;overflow:hidden}
@@ -355,7 +354,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
   .aros__media{height:auto;max-width:340px;margin:0 auto;width:100%}
   .aros__media--foto{aspect-ratio:4/5}
   .aros__media--video{aspect-ratio:9/16}
-  .franja figcaption{padding:22px 18px 14px}
+  .franja__lienzo{width:min(280px,78vw)}
   .pie__grid{grid-template-columns:1fr;gap:30px}
   .encabezado .boton span{display:none}
   .encabezado .boton{padding:11px 14px}
@@ -491,7 +490,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
             <li><span>Argollas gruesas tipo <em>hoop</em>, en dorado y plateado</span></li>
             <li><span>Aros medianos livianos, cómodos de la mañana a la noche</span></li>
             <li><span>Modelos con dije desmontable y detalle en circonias</span></li>
-            <li><span>Aros pequeños y topos para el segundo agujero</span></li>
           </ul>
           <a class="boton boton--linea" href="#disponible">Ver cuáles hay hoy</a>
         </div>
@@ -512,10 +510,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
       </div>
 
       <figure class="franja revelar">
-        <img src="assets/Imagen6.jpeg" alt="Par de aros gruesos dorados sobre una superficie gris" loading="lazy" width="1170" height="608">
+        <div class="franja__lienzo">
+          <video src="assets/video-regalo.mp4" poster="assets/video-regalo-poster.jpg"
+                 muted loop playsinline preload="metadata"
+                 aria-label="Tarjeta «Disfrútalo y brilla» y una pulsera dorada lista para regalar"></video>
+          <button class="aros__control" type="button" data-video aria-label="Pausar el video">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3.2v14H8zM12.8 5H16v14h-3.2z"/></svg>
+          </button>
+        </div>
         <figcaption>
-          <span>Aros</span>
-          <strong>Argolla gruesa en tono oro</strong>
+          <span>Así llega tu pedido</span>
+          <strong>Empacada con cariño, lista para regalar</strong>
         </figcaption>
       </figure>
     </div>
@@ -553,7 +558,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
             <span>Disponible</span>
           </div>
           <div class="destacada">
-            <div class="destacada__aro"><img src="assets/Imagen6.jpeg" alt=""></div>
+            <div class="destacada__aro"><img src="assets/Imagen5.jpeg" alt=""></div>
             <span>Aros</span>
           </div>
           <div class="destacada">
@@ -585,7 +590,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
 
       <div class="mosaico revelar">
         <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen1.jpeg" alt="Collar de eslabones dorados" loading="lazy"></a>
-        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen6.jpeg" alt="Aros gruesos dorados" loading="lazy"></a>
+        <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/video-aros-poster.jpg" alt="Aros gruesos colgando de una vara de madera" loading="lazy"></a>
         <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen3.jpeg" alt="Pulseras doradas en capas" loading="lazy"></a>
         <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen5.jpeg" alt="Aro dorado con dije de circonias" loading="lazy"></a>
         <a href="https://www.instagram.com/zahir_._/" target="_blank" rel="noopener"><img src="assets/Imagen2.jpeg" alt="Anillo dorado de banda ancha" loading="lazy"></a>
@@ -689,11 +694,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
     elementos.forEach(el => el.classList.add('visible'));
   }
 
-  // Video de aros: se reproduce solo mientras está a la vista y se puede pausar
-  (function(){
-    const video  = document.querySelector('.aros__media--video video');
-    const boton  = document.querySelector('[data-video]');
-    if (!video || !boton) return;
+  // Videos de la sección aros: cada uno se reproduce solo mientras está a la vista y se puede pausar
+  document.querySelectorAll('[data-video]').forEach((boton) => {
+    const video = boton.parentElement.querySelector('video');
+    if (!video) return;
 
     const PAUSA = 'M8 5h3.2v14H8zM12.8 5H16v14h-3.2z';
     const PLAY  = 'M8 5l11 7-11 7z';
@@ -725,7 +729,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--dorado);outline-off
       video.play().catch(()=>{});
     }
     pintar();
-  })();
+  });
 </script>
 </body>
 </html>
