@@ -10,18 +10,20 @@ body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
 
 doc = f"{title}\n{style}\n{body}"
 
-# incrustar las imágenes como data URIs
-def inline(match):
-    ruta = match.group(1)
-    archivo = base / ruta
-    mime = "image/png" if archivo.suffix == ".png" else "image/jpeg"
-    datos = base64.b64encode(archivo.read_bytes()).decode()
-    return f'src="data:{mime};base64,{datos}"'
+# incrustar imágenes y video como data URIs
+MIMES = {".png": "image/png", ".jpeg": "image/jpeg", ".jpg": "image/jpeg", ".mp4": "video/mp4"}
 
-doc = re.sub(r'src="(assets/[^"]+)"', inline, doc)
+def inline(match):
+    atributo, ruta = match.group(1), match.group(2)
+    archivo = base / ruta
+    mime = MIMES[archivo.suffix.lower()]
+    datos = base64.b64encode(archivo.read_bytes()).decode()
+    return f'{atributo}="data:{mime};base64,{datos}"'
+
+doc = re.sub(r'(src|poster)="(assets/[^"]+)"', inline, doc)
 
 destino = base / "dist" / "zahir-landing.html"
 destino.parent.mkdir(exist_ok=True)
 destino.write_text(doc, encoding="utf-8")
 print(destino, f"{destino.stat().st_size/1_000_000:.2f} MB")
-print("quedan rutas relativas:", 'src="assets' in doc)
+print("quedan rutas relativas:", 'assets/' in doc)
